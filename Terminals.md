@@ -1,6 +1,6 @@
 # Terminals
 
-## tmux
+## tmux shortcuts
 ```
 ctrl+b % = vertical split
 ctrl+b " = horizontal split
@@ -13,6 +13,8 @@ ctrl+b & = close window
 ```
 
 #### change tmux config file (.tmux.conf) to make panes in same dir and making the mouse usable.
+- open .tmux.conf `nano ~/.tmux.conf`
+- add these lines and save the file
 ```bash
 bind '"' split-window -c "#{pane_current_path}"
 bind '%' split-window -h -c "#{pane_current_path}"
@@ -20,10 +22,27 @@ set-option -g mouse on
 ```
 
 #### tmux session management
-_to detach from a session hit_: ctrl+b, d
-```bash
-tmux new-session -s mysession
-tmux ls
-tmux attach-session -t mysession
-tmux kill-session -t mysession
-```
+- detach from a session: `ctrl+b, d`
+- create new session `tmux new-session -s mysession`
+- list of all sessions `tmux ls`
+- attach to a session `tmux attach-session -t mysession`
+- kill a session `tmux kill-session -t mysession`
+
+#### Adding tmux plugin manager
+
+- clone it `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
+- open .tmux.conf `nano ~/.tmux.conf`
+- add these lines at the end and save the file
+  ```bash
+  set -g @plugin 'tmux-plugins/tpm'
+  set -g @plugin 'tmux-plugins/tmux-sensible'
+  # this line below should be added at the bottom
+  run '~/.tmux/plugins/tpm/tpm'
+  ```
+- reload tmux `tmux source ~/.tmux.conf`
+
+#### Adding tmux yank
+- clone it `git clone https://github.com/tmux-plugins/tmux-yank ~/.tmux/plugins/tmux-yank`
+- open .tmux.conf and add these line at the bottom `run-shell ~/.tmux/plugins/tmux-yank/yank.tmux` and save it
+- reload tmux `tmux source ~/.tmux.conf`
+
