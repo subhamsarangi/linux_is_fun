@@ -1,18 +1,18 @@
 # INFORMATION
 ## distro name
-lsb_release -a
+`lsb_release -a`
 
 ## architecture
-uname -m
+`uname -m`
 
 ## partitions check
-sudo blkid
+`sudo blkid`
 
 ## kernel version
-uname -r
+`uname -r`
 
 ## CPU information
-lscpu
+`lscpu`
 
 
 # SHORTCUTS
@@ -29,38 +29,39 @@ Ctrl+Shift+V
 
 # ADMINISTRATION
 ## memory usage
-free -h
+`free -h`
 
 ## disk usage
-df -h
+`df -h`
 
 ## running processes
-top -n 1
+`top -n 1`
 
 ## network interfaces
-ip a
+`ip a`
 
 ## system uptime
-uptime
+`uptime`
 
 ## active services
-systemctl list-units --type=service --state=running
+`systemctl list-units --type=service --state=running`
 
 ## Checking a service
-sudo systemctl status systemd-resolved
-sudo systemctl restart systemd-resolved
+`sudo systemctl status systemd-resolved`
+`sudo systemctl restart systemd-resolved`
 
 ## Blocking sites
-sudo nano /etc/hosts
-sudo systemd-resolved --flush-caches
+`sudo nano /etc/hosts`
+`sudo systemd-resolved --flush-caches`
 
 ## chat using netcat and telnet
-receiver-> nc -l -p 1234
-sender-> telnet ip 1234
+receiver-> `nc -l -p 1234`
+
+sender-> `telnet ip 1234`
 
 ## Add custom shortcuts
 1. Settings -> Keyboard -> Keyboard Shortcuts -> View and customize shortcuts -> Custom Shortcuts::
 2. Click on the + button
 3. Name it "Open File Manager"
-4. Set the command to nautilus (GNOME) or xdg-open
+4. Set the command to `nautilus` (GNOME) or `xdg-open`
 5. Click on the "Set Shortcut" button and press Super + E to assign it.
