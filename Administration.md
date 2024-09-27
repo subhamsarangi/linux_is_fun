@@ -65,3 +65,6 @@ sender-> `telnet ip 1234`
 3. Name it "Open File Manager"
 4. Set the command to `nautilus` (GNOME) or `xdg-open`
 5. Click on the "Set Shortcut" button and press Super + E to assign it.
+
+## Folders
+`cp -r ~/my_folder ~/backup/`
