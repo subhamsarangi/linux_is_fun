@@ -7,3 +7,5 @@
 [Softwares](/Softwares.md)
 
 [Terminals](/Terminals.md)
+
+[NGINX](/nginx_guide.md)
